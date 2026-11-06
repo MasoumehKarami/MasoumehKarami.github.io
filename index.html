@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Masoumeh Karami — Product Designer</title>
   <meta name="description" content="Masoumeh Karami is a Product Designer focused on creating clear, polished, and responsive experiences for digital products.">
+  <meta name="theme-color" content="#0b0c0e">
+  <meta name="color-scheme" content="dark">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add("js");</script>
 </head>
@@ -16,173 +18,293 @@
 
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#top" class="nav__logo">Masoumeh Karami</a>
+      <a href="#top" class="nav__logo" aria-label="Masoumeh Karami — back to top">
+        <span class="nav__mark" aria-hidden="true">MK</span>
+        <span class="nav__name">Masoumeh Karami</span>
+      </a>
 
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
         <span></span>
         <span></span>
       </button>
 
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#work" class="nav__link">Work</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
-        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li><a href="#work" class="nav__link"><span class="nav__num" aria-hidden="true">01</span>Work</a></li>
+        <li><a href="#about" class="nav__link"><span class="nav__num" aria-hidden="true">02</span>About</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta"><span class="nav__num" aria-hidden="true">03</span>Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero container">
-      <p class="eyebrow reveal">Product Designer</p>
-      <h1 class="hero__title reveal">
-        I design interfaces that explain themselves.
-      </h1>
-      <p class="hero__lead reveal">
-        I’m Masoumeh Karami, a Product Designer focused on creating clear, polished, and
-        responsive experiences for digital products.
-      </p>
-      <div class="hero__actions reveal">
-        <a href="#work" class="btn btn--primary">View selected work</a>
-        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__top">
+          <p class="eyebrow eyebrow--dot">Product Designer</p>
+          <p class="hero__meta">Portfolio <span aria-hidden="true">—</span> <span class="js-year"></span></p>
+        </div>
+
+        <h1 class="hero__title" id="hero-title">
+          <span class="line" style="--i:0"><span>I design interfaces</span></span>
+          <span class="line" style="--i:1"><span>that explain</span></span>
+          <span class="line line--accent" style="--i:2"><span><em>themselves.</em></span></span>
+        </h1>
+
+        <div class="hero__bottom">
+          <a href="#work" class="hero__cue">
+            <span class="hero__cue-icon" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="16" height="16"><path d="M8 2v11M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            Selected work
+          </a>
+
+          <div class="hero__copy">
+            <p class="hero__lead">
+              I’m Masoumeh Karami, a Product Designer focused on creating clear, polished, and
+              responsive experiences for digital products.
+            </p>
+            <div class="hero__actions">
+              <a href="#work" class="btn btn--primary">
+                View selected work
+                <svg class="btn__icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#contact" class="btn btn--ghost">Get in touch</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Selected Projects -->
-    <section class="section container" id="work" aria-labelledby="work-title">
-      <div class="section__head">
-        <p class="eyebrow reveal">01 — Selected work</p>
-        <h2 class="section__title reveal" id="work-title">Projects</h2>
-      </div>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal"><span class="eyebrow__num">01</span> Selected work</p>
+          <h2 class="section__title reveal" id="work-title">Projects</h2>
+          <p class="section__aside reveal">
+            Case studies are being prepared. The visuals below are temporary placeholders.
+          </p>
+        </header>
 
-      <div class="projects">
-        <article class="project reveal">
-          <a href="#" class="project__link" aria-label="Project One (placeholder)">
-            <div class="project__media project__media--1" aria-hidden="true">
-              <span>Image placeholder</span>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Project One</h3>
-              <p class="project__meta">Placeholder category · Year</p>
-            </div>
-            <p class="project__desc">
-              Placeholder description. Summarize the problem, your role, and the outcome.
-            </p>
-          </a>
-        </article>
+        <div class="projects">
+          <!-- Project 01 -->
+          <article class="project project--wide reveal" style="--tint: 169 184 255">
+            <a href="#" class="project__link" data-placeholder aria-label="Project One — placeholder, case study coming soon">
+              <div class="project__media" aria-hidden="true">
+                <span class="project__badge">Placeholder visual</span>
+                <div class="mock mock--dash">
+                  <div class="mock__bar"><i></i><i></i><i></i></div>
+                  <div class="mock__body">
+                    <div class="mock__side"><b></b><b></b><b></b><b></b><b></b></div>
+                    <div class="mock__main">
+                      <div class="mock__kpis"><span></span><span></span><span></span></div>
+                      <div class="mock__chart">
+                        <i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i>
+                        <i style="--h:56%"></i><i style="--h:70%"></i><i style="--h:44%"></i><i style="--h:88%"></i>
+                        <i style="--h:64%"></i><i style="--h:52%"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__body">
+                <div class="project__head">
+                  <span class="project__index">01</span>
+                  <h3 class="project__title">Project One</h3>
+                </div>
+                <ul class="project__tags">
+                  <li>Placeholder category</li>
+                  <li>Year</li>
+                </ul>
+                <p class="project__desc">
+                  Placeholder description. Summarize the problem, your role, and the outcome.
+                </p>
+                <span class="project__cta">Case study coming soon <span class="project__arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
 
-        <article class="project reveal">
-          <a href="#" class="project__link" aria-label="Project Two (placeholder)">
-            <div class="project__media project__media--2" aria-hidden="true">
-              <span>Image placeholder</span>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Project Two</h3>
-              <p class="project__meta">Placeholder category · Year</p>
-            </div>
-            <p class="project__desc">
-              Placeholder description. Summarize the problem, your role, and the outcome.
-            </p>
-          </a>
-        </article>
+          <!-- Project 02 -->
+          <article class="project reveal" style="--tint: 127 209 193">
+            <a href="#" class="project__link" data-placeholder aria-label="Project Two — placeholder, case study coming soon">
+              <div class="project__media" aria-hidden="true">
+                <span class="project__badge">Placeholder visual</span>
+                <div class="mock-phones">
+                  <div class="phone phone--back">
+                    <b class="phone__hero"></b><b class="phone__row"></b><b class="phone__row"></b><b class="phone__row phone__row--short"></b>
+                  </div>
+                  <div class="phone">
+                    <span class="phone__notch"></span>
+                    <b class="phone__hero"></b><b class="phone__row"></b><b class="phone__row"></b><b class="phone__row phone__row--short"></b>
+                    <b class="phone__cta"></b>
+                  </div>
+                </div>
+              </div>
+              <div class="project__body">
+                <div class="project__head">
+                  <span class="project__index">02</span>
+                  <h3 class="project__title">Project Two</h3>
+                </div>
+                <ul class="project__tags">
+                  <li>Placeholder category</li>
+                  <li>Year</li>
+                </ul>
+                <p class="project__desc">
+                  Placeholder description. Summarize the problem, your role, and the outcome.
+                </p>
+                <span class="project__cta">Case study coming soon <span class="project__arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
 
-        <article class="project reveal">
-          <a href="#" class="project__link" aria-label="Project Three (placeholder)">
-            <div class="project__media project__media--3" aria-hidden="true">
-              <span>Image placeholder</span>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Project Three</h3>
-              <p class="project__meta">Placeholder category · Year</p>
-            </div>
-            <p class="project__desc">
-              Placeholder description. Summarize the problem, your role, and the outcome.
-            </p>
-          </a>
-        </article>
+          <!-- Project 03 -->
+          <article class="project reveal" style="--tint: 233 184 114">
+            <a href="#" class="project__link" data-placeholder aria-label="Project Three — placeholder, case study coming soon">
+              <div class="project__media" aria-hidden="true">
+                <span class="project__badge">Placeholder visual</span>
+                <div class="mock mock--system">
+                  <div class="sys__type">Aa</div>
+                  <div class="sys__swatches"><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="sys__controls">
+                    <span class="sys__btn"></span>
+                    <span class="sys__btn sys__btn--ghost"></span>
+                    <span class="sys__toggle"></span>
+                  </div>
+                  <div class="sys__grid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="project__body">
+                <div class="project__head">
+                  <span class="project__index">03</span>
+                  <h3 class="project__title">Project Three</h3>
+                </div>
+                <ul class="project__tags">
+                  <li>Placeholder category</li>
+                  <li>Year</li>
+                </ul>
+                <p class="project__desc">
+                  Placeholder description. Summarize the problem, your role, and the outcome.
+                </p>
+                <span class="project__cta">Case study coming soon <span class="project__arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
 
-        <article class="project reveal">
-          <a href="#" class="project__link" aria-label="Project Four (placeholder)">
-            <div class="project__media project__media--4" aria-hidden="true">
-              <span>Image placeholder</span>
-            </div>
-            <div class="project__info">
-              <h3 class="project__title">Project Four</h3>
-              <p class="project__meta">Placeholder category · Year</p>
-            </div>
-            <p class="project__desc">
-              Placeholder description. Summarize the problem, your role, and the outcome.
-            </p>
-          </a>
-        </article>
+          <!-- Project 04 -->
+          <article class="project project--wide reveal" style="--tint: 229 154 176">
+            <a href="#" class="project__link" data-placeholder aria-label="Project Four — placeholder, case study coming soon">
+              <div class="project__media" aria-hidden="true">
+                <span class="project__badge">Placeholder visual</span>
+                <div class="mock-flow">
+                  <div class="flow__card"><b class="flow__icon"></b><b></b><b class="is-short"></b></div>
+                  <span class="flow__link"></span>
+                  <div class="flow__card flow__card--active"><b class="flow__icon"></b><b></b><b class="is-short"></b></div>
+                  <span class="flow__link"></span>
+                  <div class="flow__card"><b class="flow__icon"></b><b></b><b class="is-short"></b></div>
+                </div>
+              </div>
+              <div class="project__body">
+                <div class="project__head">
+                  <span class="project__index">04</span>
+                  <h3 class="project__title">Project Four</h3>
+                </div>
+                <ul class="project__tags">
+                  <li>Placeholder category</li>
+                  <li>Year</li>
+                </ul>
+                <p class="project__desc">
+                  Placeholder description. Summarize the problem, your role, and the outcome.
+                </p>
+                <span class="project__cta">Case study coming soon <span class="project__arrow" aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- About -->
-    <section class="section container" id="about" aria-labelledby="about-title">
-      <div class="section__head">
-        <p class="eyebrow reveal">02 — About</p>
-        <h2 class="section__title reveal" id="about-title">About me</h2>
-      </div>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal"><span class="eyebrow__num">02</span> About</p>
+          <h2 class="section__title reveal" id="about-title">About me</h2>
+        </header>
 
-      <div class="about">
-        <div class="about__text reveal">
-          <p class="about__lead">
-            [Bio placeholder — a short paragraph introducing who you are and how you approach design.]
-          </p>
-          <p>
-            [Second paragraph placeholder — your background, the kinds of teams or products you
-            enjoy working with, and what you care about in your process.]
-          </p>
-        </div>
-
-        <div class="about__lists reveal">
-          <div>
-            <h3 class="about__label">Services</h3>
-            <ul class="about__list">
-              <li>Service placeholder</li>
-              <li>Service placeholder</li>
-              <li>Service placeholder</li>
-              <li>Service placeholder</li>
-            </ul>
+        <div class="about">
+          <div class="about__text reveal">
+            <p class="about__lead">
+              [Bio placeholder — a short paragraph introducing who you are and how you approach design.]
+            </p>
+            <p>
+              [Second paragraph placeholder — your background, the kinds of teams or products you
+              enjoy working with, and what you care about in your process.]
+            </p>
           </div>
-          <div>
-            <h3 class="about__label">Tools</h3>
-            <ul class="about__list">
-              <li>Tool placeholder</li>
-              <li>Tool placeholder</li>
-              <li>Tool placeholder</li>
-              <li>Tool placeholder</li>
-            </ul>
+
+          <div class="about__lists">
+            <div class="panel reveal">
+              <h3 class="panel__label">Services</h3>
+              <ul class="panel__list">
+                <li>Service placeholder</li>
+                <li>Service placeholder</li>
+                <li>Service placeholder</li>
+                <li>Service placeholder</li>
+              </ul>
+            </div>
+            <div class="panel reveal">
+              <h3 class="panel__label">Tools</h3>
+              <ul class="panel__list">
+                <li>Tool placeholder</li>
+                <li>Tool placeholder</li>
+                <li>Tool placeholder</li>
+                <li>Tool placeholder</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section container contact" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow reveal">03 — Contact</p>
-      <h2 class="contact__title reveal" id="contact-title">
-        Let’s work together.
-      </h2>
-      <p class="contact__lead reveal">
-        [Placeholder — a line inviting people to reach out about projects or roles.]
-      </p>
-      <a href="mailto:hello@example.com" class="contact__email reveal">hello@example.com</a>
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__glow" aria-hidden="true"></div>
 
-      <ul class="contact__social reveal">
-        <li><a href="#" class="link-underline">LinkedIn</a></li>
-        <li><a href="#" class="link-underline">Dribbble</a></li>
-        <li><a href="#" class="link-underline">Behance</a></li>
-        <li><a href="#" class="link-underline">Résumé (PDF)</a></li>
-      </ul>
+          <p class="eyebrow"><span class="eyebrow__num">03</span> Contact</p>
+          <h2 class="contact__title" id="contact-title">Let’s work together.</h2>
+          <p class="contact__lead">
+            [Placeholder — a line inviting people to reach out about projects or roles.]
+          </p>
+
+          <div class="contact__email-row">
+            <a href="mailto:hello@example.com" class="contact__email">
+              hello@example.com
+              <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <button type="button" class="btn btn--ghost btn--sm js-copy" data-copy="hello@example.com">Copy email</button>
+            <span class="sr-only js-copy-status" aria-live="polite"></span>
+          </div>
+
+          <ul class="contact__social">
+            <li><a href="#" class="chip">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="#" class="chip">Dribbble <span aria-hidden="true">↗</span></a></li>
+            <li><a href="#" class="chip">Behance <span aria-hidden="true">↗</span></a></li>
+            <li><a href="#" class="chip">Résumé (PDF) <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p>© <span id="year"></span> Masoumeh Karami</p>
-      <a href="#top" class="link-underline">Back to top ↑</a>
+      <p>© <span class="js-year"></span> Masoumeh Karami</p>
+      <a href="#top" class="link">Back to top <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
 
